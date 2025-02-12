@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa das nossaas viagens - AMOR DA MINHA VIDA</title>
+  <link rel="shortcut icon" type="imagex/png" href="/icons/coracao.ico">
+  <link rel="stylesheet" type="text/css" href="../css/styleMaps.css" />
+  <script type="module" src="../js/jsMaps.js"></script>
+</head>
+
+<body>
+  <!-- Botão de voltar -->
+  <div><a href="/index.html"><button id="backButton">🔙 Voltar</button></a></div>
+  <!--<div><a href="index.html">🔙</a></div>-->
+  <div id="map"></div>
+
+  <!--<button id = "btVolta"></button>-->
+  <!-- Imagem oculta -->
+  <img src="https://lh3.googleusercontent.com/d/1D_Zfte2jEDqKnuCvdLDOPIXddD6LsdIB=w3000" alt="Primeiro Encontro" id="markerImage">
+  <img src="https://lh3.googleusercontent.com/d/1lc7IEG6ii1jFjJ9YkW2rcfVjKE3Q7MfK=w3000" alt="Roda Gigante" id="markerImage">
+  <img src="https://lh3.googleusercontent.com/d/1_cxDdqhDJZk4cugss_mGBvGiXx0KSIYa=w3000" alt="Nossa Casa" id="markerImage">
+  <img src="https://lh3.googleusercontent.com/d/1Gk3GnhplC4aN61eHNWewP6ngbsrGTIWi=w3000" alt="Univates" id="markerImage" />
+  <img src="https://lh3.googleusercontent.com/d/1b9dAIGG8L0qFh-LdPjhHOwpC1bu6kWDW=w3000" alt="Lagoa da Harmonia" id="markerImage" />
+  <img src="https://lh3.googleusercontent.com/d/1J1FEGVM4cxFAZSJxXSsVjszpOUQstu4i=w3000" alt="Lago Negro" id="markerImage" />
+  <img src="https://lh3.googleusercontent.com/d/15uPyoNbAisK4qKJDrPm2GnYC5uP3H9vp=w3000" alt="Oktoberfest" id="markerImage" />
+  <img src="https://lh3.googleusercontent.com/d/1Jzobz5tZs3ZJHN7YtvVTrD__0yh_evZ3=w3000" alt="Pedido de Namoro" id="markerImage" />
+  <img src="https://lh3.googleusercontent.com/d/1ilqSbvmfRGiFupXfcDZqqlr70P5m3q9I=w3000" alt="Os Olhos mais lindos deste mundo!" id="markerImage" />
+  <img src="https://lh3.googleusercontent.com/d/1ZKwqjugnZ0Shv4Nr60MzRVvKRMu0eGxw=w3000" alt="Praça Matriz" id="markerImage" />
+  <img src="https://lh3.googleusercontent.com/d/1HEP9y5mEjP4TlKn7jos_lBvMSh_7K0Fj=w3000" alt="Ano Novo" id="markerImage" />
+  <img src="https://lh3.googleusercontent.com/d/115si2heyj5WztGNLKbdaty5_5CC9Bx-U=w3000" alt="Tramandaí" id="markerImage" />
+  <img src="https://lh3.googleusercontent.com/d/1-J662yb19LPGhb8IdMrr9taVp9mSBPs4=w3000" alt="Arroio do Sal" id="markerImage" />
+  <img src="https://lh3.googleusercontent.com/d/1ZEEx0-hZaY_GXcFLg5MV_D_kbyEUczHd=w3000" alt="Lagoa Taquari" id="markerImage" />
+  <img src="https://lh3.googleusercontent.com/d/1iMPjXr8cbmkLG_L0F-nvp59y5GM3ErzO=w3000" alt="Acampamento Caraá" id="markerImage" />
+
+  <!-- Script do Google Maps -->
+  <script>
+    ((g) => {
+      var h,
+        a,
+        k,
+        p = "The Google Maps JavaScript API",
+        c = "google",
+        l = "importLibrary",
+        q = "__ib__",
+        m = document,
+        b = window;
+      b = b[c] || (b[c] = {});
+      var d = b.maps || (b.maps = {}),
+        r = new Set(),
+        e = new URLSearchParams(),
+        u = () =>
+          h ||
+          (h = new Promise(async (f, n) => {
+            await (a = m.createElement("script"));
+            e.set("libraries", [...r] + "");
+            for (k in g)
+              e.set(
+                k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+                g[k]
+              );
+            e.set("callback", c + ".maps." + q);
+            a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+            d[q] = f;
+            a.onerror = () => (h = n(Error(p + " could not load.")));
+            a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+            m.head.append(a);
+          }));
+      d[l]
+        ? console.warn(p + " only loads once. Ignoring:", g)
+        : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+    })({ key: "AIzaSyBiOvCLhDAZ2k0LnGLEC3_gj2eSWnbKI5Q", v: "weekly" });
+  </script>
+</body>
+
+</html>
